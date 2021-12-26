@@ -12,7 +12,6 @@ const App = () => {
   const [likes, setLikes] = useState(0);
   const [dislikes, setDislikes] = useState(0);
   const [index, setIndex] = useState(0);
-  const [pets] = useState(petsArray);
   const [enable, setEnable] = useState(true);
   const [message, setMessage] = useState('');
 
@@ -32,7 +31,7 @@ const App = () => {
   };
 
   const displayNext = () => {
-    if (index === pets.length - 1) {
+    if (index === petsArray.length - 1) {
       setEnable(false);
       getMessage();
     } else setIndex(index + 1);
@@ -54,7 +53,7 @@ const App = () => {
         <Emoji count={likes} cls="green" icon={<i className="fas fa-thumbs-up fa-2x"></i>} />
         <Emoji count={dislikes} cls="red" icon={<i className="fas fa-thumbs-down fa-2x"></i>} />
       </div>
-      <Card pet={pets[index]} cls={!enable}/>
+      <Card pet={petsArray[index]} cls={!enable}/>
       <Message msg={message} cls={enable} />
       <div className="btns-container">
         <Button
