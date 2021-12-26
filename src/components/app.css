@@ -38,21 +38,19 @@ html{
 button{
     border: none;
     border-radius: 50%;
-    width: 6rem;
-    height: 6rem;
     font-size: 3rem;
-    color: white;
+    text-align: center;
+    background-color: transparent;
 }
 .red{
-    background-color: red;
-    border: 3px darkred solid;
+    color: red;
 }
 .green{
-    background-color: green;
-    border: 3px darkgreen solid;
+   color:green
 }
-.icon{
-    font-size: 3rem;
+.count{
+   font-size: 5rem; 
+   padding: 0 1rem;
 }
 .hide{
     display: none;

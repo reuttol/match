@@ -51,8 +51,8 @@ const App = () => {
   return (
     <div className="app">
       <div className="header-container">
-        <Emoji count={likes} icon={"👍"} />
-        <Emoji count={dislikes} icon={"👎"} />
+        <Emoji count={likes} cls="green" icon={<i className="fas fa-thumbs-up fa-2x"></i>} />
+        <Emoji count={dislikes} cls="red" icon={<i className="fas fa-thumbs-down fa-2x"></i>} />
       </div>
       <Card pet={pets[index]} cls={!enable}/>
       <Message msg={message} cls={enable} />
@@ -60,12 +60,12 @@ const App = () => {
         <Button
           handleClick={addLikes}
           cls="green"
-          icon={"✔️"}
+          icon={<i className="far fa-2x fa-check-circle"></i>}
         />
         <Button
           handleClick={addDislikes}
           cls="red"
-          icon={"❌"}
+          icon={<i className="far fa-2x fa-times-circle"></i>}
         />
       </div>
     </div>
